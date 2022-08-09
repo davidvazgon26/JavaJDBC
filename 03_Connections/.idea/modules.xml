@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JDBCExceptions/JDBCExceptions.iml" filepath="$PROJECT_DIR$/JDBCExceptions/JDBCExceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java7Closeable/Java7Closeable.iml" filepath="$PROJECT_DIR$/Java7Closeable/Java7Closeable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiConnect/MultiConnect.iml" filepath="$PROJECT_DIR$/MultiConnect/MultiConnect.iml" />
+    </modules>
+  </component>
+</project>
