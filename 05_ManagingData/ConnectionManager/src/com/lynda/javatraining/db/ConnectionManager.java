@@ -5,10 +5,11 @@ import java.sql.SQLException;
 
 public class ConnectionManager
 {
+
 	private static ConnectionManager instance = null;
 
 	private final String USERNAME = "dbuser";
-	private final String PASSWORD = "dbpassword";
+	private final String PASSWORD = "Qwerty78.";
 	private final String H_CONN_STRING =
 			"jdbc:hsqldb:data/explorecalifornia";
 	private final String M_CONN_STRING =

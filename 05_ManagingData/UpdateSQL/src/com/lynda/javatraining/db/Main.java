@@ -17,5 +17,14 @@ public class Main {
 			System.err.println("Row not found");
 			return;
 		}
+
+		String password = InputHelper.getInput("Enter new password");
+		bean.setPassword(password);
+
+		if(AdminManager.update(bean)){
+			System.out.println("Success!!");
+		}else{
+			System.err.println("whoops!!!");
+		}
 	}
 }

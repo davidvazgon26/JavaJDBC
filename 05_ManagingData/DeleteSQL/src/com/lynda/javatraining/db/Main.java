@@ -11,5 +11,12 @@ public class Main {
 
 		int adminId = InputHelper.getIntegerInput("Select a row to delete: ");
 
+		if (AdminManager.delete(adminId)){
+			System.out.println("Success!!");
+		}else{
+			System.err.println("Nothing ti delete");
+		}
+
+
 	}
 }

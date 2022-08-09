@@ -4,6 +4,8 @@ import com.lynda.javatraining.db.beans.Admin;
 import com.lynda.javatraining.db.tables.AdminManager;
 import com.lynda.javatraining.util.InputHelper;
 
+import java.sql.Connection;
+
 public class Main {
 
 	public static void main(String[] args) throws Exception {
@@ -29,6 +31,9 @@ public class Main {
 		
 		String password = InputHelper.getInput("Enter new password: ");
 		bean.setPassword(password);
+
+		Connection conn = ConnectionManager.getInstance().getConnection();
+		conn.setAutoCommit(false);
 		
 		if (AdminManager.update(bean)) {
 			System.out.println("Success!");
@@ -36,7 +41,10 @@ public class Main {
 		{
 			System.err.println("whoops!");
 		}
-		
+
+		conn.rollback();
+		System.out.println("Transaction rolled back");
+
 		ConnectionManager.getInstance().close();
 	}
 }

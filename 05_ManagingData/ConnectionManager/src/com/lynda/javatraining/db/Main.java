@@ -9,6 +9,8 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 
 		System.out.println("Starting application");
+
+		ConnectionManager.getInstance().setDBType(DBType.MYSQL);
 		
 		AdminManager.displayAllRows();
 
@@ -29,6 +31,8 @@ public class Main {
 		{
 			System.err.println("whoops!");
 		}
+
+		ConnectionManager.getInstance().close();
 		
 	}
 }

@@ -108,7 +108,17 @@ public class AdminManager {
 				Connection conn = DBUtil.getConnection(DBType.MYSQL);
 				PreparedStatement stmt = conn.prepareStatement(sql);
 				){
-			return true;
+
+			stmt.setString(1, bean.getUserName());
+			stmt.setString(2, bean.getPassword());
+			stmt.setInt(3, bean.getAdminId());
+
+			int affected = stmt.executeUpdate();
+			if(affected == 1){
+				return true;
+			}else{
+				return false;
+			}
 		}
 		catch(SQLException e) {
 			System.err.println(e);
