@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.lynda.javatraining.db.ConnectionManager;
-import com.lynda.javatraining.db.DBType;
-import com.lynda.javatraining.db.DBUtil;
+// import com.lynda.javatraining.db.DBType;
+// import com.lynda.javatraining.db.DBUtil;
 import com.lynda.javatraining.db.beans.Admin;
 
 public class AdminManager {
